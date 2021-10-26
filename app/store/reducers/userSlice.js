@@ -2,7 +2,7 @@ import {createSlice} from '@reduxjs/toolkit';
 import {storeUsers, getUsers} from '../asyncStorageScripts';
 
 const initialState = {
-  users: getUsers() != null ? getUsers() : [],
+  users: getUsers(),
 };
 
 export const userSlice = createSlice({
