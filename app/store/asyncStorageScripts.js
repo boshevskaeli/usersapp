@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const storeUsers = async (value) => {
+export const storeUsers = async (value) => {
   try {
     await AsyncStorage.setItem('@users', value);
   } catch (e) {
@@ -9,7 +9,7 @@ const storeUsers = async (value) => {
   }
 };
 
-const getUsers = async () => {
+export const getUsers = async () => {
   try {
     const jsonValue = await AsyncStorage.getItem('@users');
     return jsonValue != null ? JSON.parse(jsonValue) : [];
