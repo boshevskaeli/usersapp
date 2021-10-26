@@ -12,7 +12,7 @@ const storeUsers = async (value) => {
 const getUsers = async () => {
   try {
     const jsonValue = await AsyncStorage.getItem('@users');
-    return jsonValue != null ? JSON.parse(jsonValue) : null;
+    return jsonValue != null ? JSON.parse(jsonValue) : [];
   } catch (e) {
     // error reading value
     console.log('Error reading users', e);
