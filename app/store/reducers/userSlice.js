@@ -2,7 +2,9 @@ import {createSlice} from '@reduxjs/toolkit';
 import {storeUsers, getUsers} from '../asyncStorageScripts';
 
 const initialState = {
-  users: getUsers(),
+  // users: getUsers(),
+  users: [],
+  usersv2: getUsers()
 };
 
 export const userSlice = createSlice({
@@ -11,7 +13,8 @@ export const userSlice = createSlice({
   reducers: {
     addUser: (state, {payload}) => {
       state.users.push(payload);
-      storeUsers(state.users);
+      // storeUsers(state.users);
+      console.log("v2", usersv2)
     },
     deleteUser: (state, {payload}) => {
       state.users.pop(payload);
