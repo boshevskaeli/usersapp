@@ -4,7 +4,7 @@ import {storeUsers, getUsers} from '../asyncStorageScripts';
 const initialState = {
   // users: getUsers(),
   users: [],
-  usersv2: getUsers()
+  temp: getUsers(),
 };
 
 export const userSlice = createSlice({
@@ -14,7 +14,7 @@ export const userSlice = createSlice({
     addUser: (state, {payload}) => {
       state.users.push(payload);
       // storeUsers(state.users);
-      console.log("v2", usersv2)
+      console.log('sdasdsadsadas', temp);
     },
     deleteUser: (state, {payload}) => {
       state.users.pop(payload);
